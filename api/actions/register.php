@@ -24,58 +24,59 @@
 		if (strlen($username) == 0) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'O <b>nome de usuário(a)</b> não pode ficar vázio!'
+				"message" => 'Username cant stay <b>clean</b>!'
 			]);
 		} else if (strlen($username) < 3 || strlen($username) > 15 || $Function::Validate('username', $username) !== true) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'Nome de usuário <b>inválido</b>!'
+				"message" => 'Username <b>invalid</b>!'
 			]);
 		} else if ($consult_if_exists_username->rowCount() > 0) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'O nome de usuário(a) <b>' . $username . '</b> já está sendo utilizado!'
+				"message" => 'The username <b>' . $username . '</b> is already being used!'
 			]);
 		} else if (strlen($email) == 0) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'Você precisa fornecer um <b>endereço de e-mail</b>!'
+				"message" => 'You need to <b>your email address</b>!'
 			]);
 		} else if ($Function::Validate('email', $email) !== false) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'O <b>endereço de e-mail</b> fornecido é <b>inválido</b>!'
+				"message" => 'The <b>email address</b> provided is <b>invalid</b>!'
 			]);
 		} else if ($consult_if_exists_mail->rowCount() > 0) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'O <b>endereço de e-mail</b> fornecido já está sendo utilizado!'
+				"message" => 'The <b> email address</b> provided is already in use!'
 			]);
 		} else if (strlen($password) == 0) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'Você precisa fornecer uma <b>senha</b>, e <b>segura</b> para a sua conta!'
+				"message" => 'You need to provide <b> password</b>, <b>secure</b> for your account!'
 			]);
 		} else if (strlen($password) < 6 || strlen($password) > 32) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'Sua senha deve conter no <b>mínimo 6 caracteres</b> e no <b>máximo 32 caracteres</b>!'
+				"message" => 'Your password must contain <b>minimum 6 characters</b> and <b>32 characters</b>!'
 			]);
 		} else if (empty($birth_day) || empty($birth_month) || empty($birth_year)) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'Você precisa fornecer a sua <b>data de nascimento</b> por completo!'
+				"message" => 'You need to provide <b> date of birth</b> complete!'
 			]);
 		} else if ($birth_year >= date('Y') - 13) {
 			echo json_encode([
 				"response" => 'error',
-				"message" => 'Você precisa <b>ter mais que 13</b> anos de idade para poder jogar!'
+				"message" => 'You need <b> be over 13</b> years old to be able to play!'
 			]);
 		} else if (empty($gender) || $gender == null || $gender == '') {
 			echo json_encode([
 				"response" => 'error',
-				"message" => '<b>Escolha o seu sexo</b>, e através dele receba um cafofo incrível!'
+				"message" => '<b>Choose your sex</b>, and through it get an amazing scoundrell!'
 			]);
+			//ACTIVE THIS WHEN YOU PUT CAPTCHA CODE
 		}/* else if (empty($captcha) || $captcha == null || $captcha == '') {
 			echo json_encode([
 				"response" => 'error',
