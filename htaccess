@@ -1,0 +1,85 @@
+RewriteEngine On
+
+RewriteRule ^index(|/)$ / [R=301,L]
+
+RewriteRule ^maintenance(|/)$ files/cms/index/maintenance.php
+
+RewriteRule ^(|/)$ files/cms/index/index.php
+RewriteRule ^index(|/)$ files/cms/index/index.php
+RewriteRule ^register(|/)$ files/cms/index/register.php
+RewriteRule ^logout(|/)$ logout.php 
+RewriteRule ^adblock(|/)$ files/cms/others/adblock.php
+
+# Regras de dominio do site em geral
+
+RewriteRule ^habbo-imaging/badge/([^/]+) /habbo-imaging/badge.php?badge=$1
+RewriteRule ^habbo-imaging/head/([^/]+) /habbo-imaging/head.php?figure=$1
+
+RewriteRule ^me(|/)$ files/cms/me/me.php
+RewriteRule ^client(|/)$ files/cms/client/index.php
+RewriteRule ^client/(..*)(|/)$ files/cms/client/index.php?room=$1
+
+RewriteRule ^article/(..*)(|/)$ files/cms/articles/article.php?article_id=$1
+RewriteRule ^article(|/)$ files/cms/articles/article.php
+
+RewriteRule ^community/staff(|/)$ files/cms/community/staff.php
+RewriteRule ^community/halloffame(|/)$ files/cms/community/fame.php
+RewriteRule ^community/halloffame/fame(|/)$ files/cms/community/fame.php
+RewriteRule ^community/halloffame/achievements(|/)$ files/cms/community/achievements.php
+RewriteRule ^community/halloffame/fastfood(|/)$ files/cms/community/fastfood.php
+
+RewriteRule ^avatar/([^/]+)(|/)$ user.php?username=$1
+
+RewriteRule ^profile/(..*)(|/)$ files/cms/me/profile.php?user=$1
+RewriteRule ^profile(|/)$ files/cms/me/profile.php
+
+RewriteRule ^shop/vip(|/)$ files/cms/shop/vip.php
+
+
+# Regras do Painel
+
+RewriteRule ^panel/logout(|/)$ files/painel/logout.php
+RewriteRule ^panel(|/)$ files/painel/files/navigation/index.php
+RewriteRule ^panel/index(|/)$ files/painel/files/navigation/index.php
+
+RewriteRule ^panel/home(|/)$ files/painel/files/navigation/home.php
+RewriteRule ^panel/article/create(|/)$ files/painel/files/navigation/create-article.php
+RewriteRule ^panel/article/(..*)/edit(|/)$ files/painel/files/navigation/edit-article.php?article_id=$1
+RewriteRule ^panel/articles/(..*)(|/)$ files/painel/files/navigation/articles.php?user=$1
+RewriteRule ^panel/host-badge(|/)$ files/painel/files/navigation/host-badge.php
+RewriteRule ^panel/hall-points(|/)$ files/painel/files/navigation/hall-points.php
+
+RewriteRule ^hk/logout(|/)$ hk/files/logout.php
+RewriteRule ^hk(|/)$ hk/files/index.php
+RewriteRule ^hk/index(|/)$ hk/files/index.php
+
+RewriteRule ^hk/home(|/)$ hk/files/home.php
+RewriteRule ^hk/articles/create(|/)$ hk/files/create-article.php
+RewriteRule ^hk/articles/(..*)(|/)$ hk/files/articles.php?user=$1
+RewriteRule ^hk/articles(|/)$ hk/files/articles.php
+RewriteRule ^hk/article/edit/(..*)(|/)$ hk/files/edit-article.php?article_id=$1
+
+RewriteRule ^camera/camera/(..*)(|/)$ camera/camera.php?ssoTicket=$1
+RewriteRule ^camera/photos(|/)$ camera/photos/
+
+# ------------------------------------------------------------
+
+# Ações da API
+
+RewriteRule ^api/login(|/)$ api/login.php
+RewriteRule ^api/check(|/)$ api/check.php
+RewriteRule ^api/look(|/)$ api/look.php
+RewriteRule ^api/register(|/)$ api/actions/register.php
+RewriteRule ^api/reaction(|/)$ api/actions/reaction.php
+RewriteRule ^api/form(|/)$ api/actions/form.php
+RewriteRule ^api/errand(|/)$ api/actions/errand.php
+RewriteRule ^api/comment(|/)$ api/actions/comment.php
+RewriteRule ^api/shop(|/)$ api/actions/shop.php
+RewriteRule ^api/client(|/)$ api/actions/client.php
+
+RewriteRule ^api/radio(|/)$ api/radio.php
+
+RewriteRule ^api/panel(|/)$ api/panel.php
+RewriteRule ^api/panel/host-badge(|/)$ files/painel/files/others/ajax-host-badge.php
+
+ErrorDocument 404 /files/cms/others/error.php
