@@ -22,12 +22,12 @@
 					<icon name="fame"></icon>
 				</div>
 				<div class="flex">
-					<a href="<?= URL . '/community/halloffame/fame'; ?>" place="Comunidade: Hall da Fama - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
-						<label>Riqueza</label>
+					<a href="<?= URL . '/community/halloffame/fame'; ?>" place="Community: Hall of Fame - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
+						<label>Wealth</label>
 					</a>
 					<separator></separator>
-					<a href="<?= URL . '/community/halloffame/achievements'; ?>" place="Comunidade: Hall da Fama - <?= HOTELNAME; ?>" class="another-header-menu-option">
-						<label>Conquistas</label>
+					<a href="<?= URL . '/community/halloffame/achievements'; ?>" place="Community: Hall of Fame - <?= HOTELNAME; ?>" class="another-header-menu-option">
+						<label>Achievements</label>
 					</a>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 					?>
 						<div class="first-famous-habbo">
 							<div class="first-famous-habbo-banner credits">
-								<label>Créditos</label>
+								<label>Coins</label>
 							</div>
 							<div class="flex">
 								<div class="first-famous-habbo-imager">
@@ -53,7 +53,7 @@
 								<div class="flex margin-auto-top-bottom width-content">
 									<label class="gray flex-column margin-auto-top-bottom">
 										<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-										<h6>por ter <b><?= number_format($result_hall_currency['credits']); ?></b> créditos</h6>
+										<h6>for having <b><?= number_format($result_hall_currency['credits']); ?></b> credits</h6>
 									</label>
 									<div class="trophy flex">
 										<icon name="gold-trophy"></icon>
@@ -76,7 +76,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['credits']); ?></b> créditos</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['credits']); ?></b> credits</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="silver-trophy"></icon>
@@ -98,7 +98,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['credits']); ?></b> créditos</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['credits']); ?></b> credits</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="bronze-trophy"></icon>
@@ -120,7 +120,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['credits']); ?></b> créditos</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['credits']); ?></b> credits</h6>
 								</label>
 							</div>
 						</div>
@@ -136,7 +136,7 @@
 					?>
 						<div class="first-famous-habbo">
 							<div class="first-famous-habbo-banner diamonds">
-								<label>Diamantes</label>
+								<label>Diamonds</label>
 							</div>
 							<div class="flex">
 								<div class="first-famous-habbo-imager">
@@ -145,7 +145,7 @@
 								<div class="flex margin-auto-top-bottom width-content">
 									<label class="gray flex-column margin-auto-top-bottom">
 										<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-										<h6>por ter <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamantes</h6>
+										<h6>for having <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamonds</h6>
 									</label>
 									<div class="trophy flex">
 										<icon name="gold-trophy"></icon>
@@ -168,7 +168,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamantes</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamonds</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="silver-trophy"></icon>
@@ -190,7 +190,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamantes</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamonds</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="bronze-trophy"></icon>
@@ -212,7 +212,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamantes</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['vip_points']); ?></b> diamonds</h6>
 								</label>
 							</div>
 						</div>
@@ -237,7 +237,7 @@
 								<div class="flex margin-auto-top-bottom width-content">
 									<label class="gray flex-column margin-auto-top-bottom">
 										<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-										<h6>por ter <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
+										<h6>for having <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
 									</label>
 									<div class="trophy flex">
 										<icon name="gold-trophy"></icon>
@@ -260,7 +260,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="silver-trophy"></icon>
@@ -282,7 +282,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="bronze-trophy"></icon>
@@ -304,7 +304,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a class="no-link" href="<?= URL; ?>/profile/<?= $result_hall_currency['username']; ?>"><?= $result_hall_currency['username']; ?></a></h5>
-									<h6>por ter <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
+									<h6>for having <b><?= number_format($result_hall_currency['activity_points']); ?></b> duckets</h6>
 								</label>
 							</div>
 						</div>
