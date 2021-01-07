@@ -89,7 +89,7 @@
 						<label class="gray flex- margin-auto-top-bottom">
 							<h4 class="bold"><?= $result_article['title']; ?></h4>
 							<h5><?= $result_article['shortstory']; ?></h5>
-							<h6 class="margin-top-minm">Publicada por <a href="<?= URL . '/profile/' . $result_author['username']; ?>" place="<?= 'Perfil: ' . $result_author['username'] . ' - ' . HOTELNAME; ?>" class="no-link bold"><?= $result_author['username']; ?></a> em <b><?= utf8_encode(strftime('%d de %B de %Y', $result_article['timestamp'])); ?></b> às <b><?= utf8_encode(strftime('%H:%M', $result_article['timestamp'])); ?></b> na categoria <b><?= $result_article['category']; ?></b></h6>
+							<h6 class="margin-top-minm">Published by <a href="<?= URL . '/profile/' . $result_author['username']; ?>" place="<?= 'Perfil: ' . $result_author['username'] . ' - ' . HOTELNAME; ?>" class="no-link bold"><?= $result_author['username']; ?></a> em <b><?= utf8_encode(strftime('%d de %B de %Y', $result_article['timestamp'])); ?></b> às <b><?= utf8_encode(strftime('%H:%M', $result_article['timestamp'])); ?></b> na categoria <b><?= $result_article['category']; ?></b></h6>
 						</label>
 					</div>
 					<div class="news-article-body"><?= $result_article['longstory']; ?></div>
@@ -98,14 +98,14 @@
 						<a <?php if ($result_article['form_link'] != NULL) { ?>href="<?= $result_article['form_link']; ?>" target="_blank"<?php } ?> class="news-article-form no-link">
 							<label class="flex white pointer-none">
 								<icon name="duck" class="margin-auto-top-bottom"></icon>
-								<h5 class="margin-auto-top-bottom margin-left-min">Formulário</h5>
+								<h5 class="margin-auto-top-bottom margin-left-min">Form</h5>
 							</label>
 						</a>
 					<?php } else if ($result_article['form'] == 'unavailable') { ?>
 						<div class="news-article-form-disabled" disabled>
 							<label class="flex white pointer-none">
 								<icon name="duck" class="margin-auto-top-bottom"></icon>
-								<h5 class="margin-auto-top-bottom margin-left-min">Formulário indisponível</h5>
+								<h5 class="margin-auto-top-bottom margin-left-min">Form unavailable</h5>
 							</label>
 						</div>
 					<?php } ?>
@@ -137,7 +137,7 @@
 									<img alt="<?= $user['username']; ?>" src="<?= AVATARIMAGE . 'figure=' . $user['figure']; ?>&action=wlk,crr=667direction=2&head_direction=3&gesture=sml&size=n&img_format=png&frame=0&headonly=0">
 								</div>
 								<div class="general-contenteditable flex">
-									<div contenteditable="true" placeholder="Digite aqui seu comentário..."></div>
+									<div contenteditable="true" placeholder="Enter your comment here..."></div>
 									<div class="contenteditable-editor flex-column">
 										<button class="reset-button bold" onclick="Style('bold');">B</button>
 										<button class="reset-button italic" onclick="Style('italic');">I</button>
@@ -145,7 +145,7 @@
 									</div>
 								</div>
 								<div class="article-send-comment-button">
-									<button data-article-id="<?= $result_article['id']; ?>">Enviar comentário</button>
+									<button data-article-id="<?= $result_article['id']; ?>">Send comment...</button>
 								</div>
 							</div>
 							<div class="send-comment-warn"></div>
@@ -171,7 +171,7 @@
 								</div>
 								<label class="gray margin-auto-top-bottom">
 									<h5><?= $Function::Filter('xss', $result_comments_from_article['value']); ?></h5>
-									<h6 class="fs-10 margin-top-minm">Por <a href="<?= URL . '/profile/' . $result_author_comment['username']; ?>" place="Perfil: <?= $result_author_comment['username'] . ' - ' . HOTELNAME; ?>" class="no-link bold"><?= $result_author_comment['username']; ?></a> em <b><?= utf8_encode(strftime('%d de %B de %Y', $result_comments_from_article['timestamp'])); ?></b> às <b><?= utf8_encode(strftime('%H:%M', $result_comments_from_article['timestamp'])); ?></b></h6>
+									<h6 class="fs-10 margin-top-minm">By <a href="<?= URL . '/profile/' . $result_author_comment['username']; ?>" place="Perfil: <?= $result_author_comment['username'] . ' - ' . HOTELNAME; ?>" class="no-link bold"><?= $result_author_comment['username']; ?></a> em <b><?= utf8_encode(strftime('%d de %B de %Y', $result_comments_from_article['timestamp'])); ?></b> às <b><?= utf8_encode(strftime('%H:%M', $result_comments_from_article['timestamp'])); ?></b></h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -180,8 +180,8 @@
 			<?php } else { ?>
 				<div class="general-box article-comments-disabled flex height-auto margin-top-min">
 					<label class="white">
-						<h3 class="bold">Melhor comentar sobre a vida dos outros</h3>
-						<h5>Pois os comentários para essa noticia, foram desativados pelo autor.</h5>
+						<h3 class="bold">Better comment on the lives of others</h3>
+						<h5>For the comments for this news, were disabled by the author.</h5>
 					</label>
 				</div>
 			<?php } ?>
@@ -196,8 +196,8 @@
 						<icon name="plus-magic" class="flex margin-auto"></icon>
 					</div>
 					<label class="gray flex-column text-nowrap">
-						<h4 class="bold text-nowrap">Outras noticias</h4>
-						<h6 class="text-nowrap">Veja aqui outras noticias</h6>
+						<h4 class="bold text-nowrap">Other news</h4>
+						<h6 class="text-nowrap">See here for more news</h6>
 					</label>
 				</div>
 				<div class="general-box-content flex-column">
@@ -209,37 +209,37 @@
 
 						switch ($i) {
 							case 0:
-							$section_name = 'Hoje';
+							$section_name = 'Today';
 							$section_time_max = time();
 							$section_time_min = time() - 86400;
 							break;
 							case 1:
-							$section_name = 'Ontem';
+							$section_name = 'Yesterday';
 							$section_time_max = time() - 86400;
 							$section_time_min = time() - 172800;
 							break;
 							case 2:
-							$section_name = 'Esta semana';
+							$section_name = 'This week';
 							$section_time_max = time() - 172800;
 							$section_time_min = time() - 604800;
 							break;
 							case 3:
-							$section_name = 'Semana anterior';
+							$section_name = 'Previous week';
 							$section_time_max = time() - 604800;
 							$section_time_min = time() - 1209600;
 							break;
 							case 4:
-							$section_name = 'Este mês';
+							$section_name = 'This month';
 							$section_time_max = time() - 1209600;
 							$section_time_min = time() - 2592000;
 							break;
 							case 5:
-							$section_name = 'Último mês';
+							$section_name = 'Last month';
 							$section_time_max = time() - 2592000;
 							$section_time_min = time() - 5184000;
 							break;
 							case 6:
-							$section_name = 'Último mês';
+							$section_name = 'Last month';
 							$section_time_max = time() - 5184000;
 							$section_time_min = time() - 269298000;
 							break;
