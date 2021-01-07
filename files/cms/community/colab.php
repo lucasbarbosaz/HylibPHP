@@ -22,12 +22,12 @@
 					<icon name="help"></icon>
 				</div>
 				<div class="flex">
-					<a href="<?= URL . '/community/staff'; ?>" place="Comunidade: Staff - <?= HOTELNAME; ?>" class="another-header-menu-option">
+					<a href="<?= URL . '/community/staff'; ?>" place="Community: Staff - <?= HOTELNAME; ?>" class="another-header-menu-option">
 						<label>Staff</label>
 					</a>
 					<separator></separator>
-					<a href="<?= URL . '/community/collaboration'; ?>" place="Comunidade: Colaboração - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
-						<label>Colaboradores</label>
+					<a href="<?= URL . '/community/collaboration'; ?>" place="Community: Colaboração - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
+						<label>Employees</label>
 					</a>
 				</div>
 			</div>
@@ -41,8 +41,8 @@
 								<icon name="duck" class="flex margin-auto"></icon>
 							</div>
 							<label class="gray flex-column text-nowrap">
-								<h4 class="bold text-nowrap">Guardiões</h4>
-								<h6 class="text-nowrap">Responsáveis pela moderação dos quartos do hotel e atendimento ao usuário.</h6>
+								<h4 class="bold text-nowrap">Guardians</h4>
+								<h6 class="text-nowrap">Responsible for the moderation of hotel rooms and user service.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -67,7 +67,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Faço parte da equipe do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am part of the <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -78,7 +78,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">It seems that no one is occupying this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -90,8 +90,8 @@
 								<icon name="duck" class="flex margin-auto"></icon>
 							</div>
 							<label class="gray flex-column text-nowrap">
-								<h4 class="bold text-nowrap">Ajudantes</h4>
-								<h6 class="text-nowrap">Responsáveis por ajudar novos usuários.</h6>
+								<h4 class="bold text-nowrap">Helpers</h4>
+								<h6 class="text-nowrap">Responsible for helping new users.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -116,7 +116,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Faço parte da equipe do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am part of <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -127,7 +127,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">It seems that no one is occupying this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -141,8 +141,8 @@
 								<icon name="duck" class="flex margin-auto"></icon>
 							</div>
 							<label class="gray flex-column text-nowrap">
-								<h4 class="bold text-nowrap">Embaixadores</h4>
-								<h6 class="text-nowrap">Responsáveis pela supervisão dos colaboradores.</h6>
+								<h4 class="bold text-nowrap">Ambassadors</h4>
+								<h6 class="text-nowrap">Responsible for supervising employees.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -167,7 +167,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Faço parte da equipe do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am part of <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -178,7 +178,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">It seems that no one is occupying this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -191,17 +191,17 @@
 									<icon name="help" class="flex margin-auto"></icon>
 								</div>
 								<label class="gray flex-column text-nowrap">
-									<h4 class="bold text-nowrap">Colaboração <?= str_replace(' Hotel', '', HOTELNAME); ?></h4>
-									<h6 class="text-nowrap">Quem nós somos, o que fazemos?</h6>
+									<h4 class="bold text-nowrap">Collaboration <?= str_replace(' Hotel', '', HOTELNAME); ?></h4>
+									<h6 class="text-nowrap">Who we are, what do we do?</h6>
 								</label>
 							</div>
 							<div class="general-box-content staff flex-column padding-md">
 								<label class="flex-column gray">
-									<h5 class="margin-bottom-min">A equipe de colaboração do oHabbo, composta por Embaixadores, Guardiões e Ajudantes estão sempre prontos para auxiliar os usuários a qualquer questionamento. </h5>
-									<h5 class="margin-bottom-min">Os Colaboradores também são responsáveis pela moderação dos quartos e salas de bate papo.</h5>
-									<h5 class="margin-bottom-md">Então caso alguém se passe por um membro da equipe denuncie o mas rápido possível!</h5>
-									<h6 class="bold fs-12">CUIDADO!</h6>
-									<h6>Nenhum Colaborador, assim como Staff, irá pedir a sua senha. Caso isso aconteça, denuncie a um Staff.</h6>
+									<h5 class="margin-bottom-min">The Lella collaboration team, composed of Ambassadors, Guardians and Helpers, is always ready to assist users with any questions. </h5>
+									<h5 class="margin-bottom-min">Employees are also responsible for moderating rooms and chat rooms.</h5>
+									<h5 class="margin-bottom-md">So in case someone passes for a team member, report it as soon as possible!</h5>
+									<h6 class="bold fs-12">WARNING!</h6>
+									<h6>No Contributor, like Staff, will ask for your password. If this happens, report it to a Staff.</h6>
 								</label>
 							</div>
 						</div>
