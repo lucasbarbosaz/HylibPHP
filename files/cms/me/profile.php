@@ -1,12 +1,12 @@
 <?php 
 	require_once('../../../geral.php');
 
-	/*if (isset($user['username'])) {
+	if (isset($user['username'])) {
 		$Hotel::Manutention($user['rank']);
 	} else {
 		$Hotel::Manutention();
 	}
-	*/
+	
 
 	if (isset($_GET['user'])) {
 		$profile = (isset($_GET['user'])) ? Functions::Filter('username', $_GET['user']) : '';
@@ -82,14 +82,14 @@
 								</div>
 								<div class="profile-card-main-about-friends flex margin-auto-top-bottom margin-auto-left">
 									<icon name="friends" class="margin-right-minm"></icon>
-									<label class="fs-14 white"><?= number_format($profile_result_friends->rowCount()); ?> amig<?php if ($profile_result_friends->rowCount() != '1') { ?>os(as)<?php } else { ?>o(a)<?php } ?></label>
+									<label class="fs-14 white"><?= number_format($profile_result_friends->rowCount()); ?> frien<?php if ($profile_result_friends->rowCount() != '1') { ?>ds<?php } else { ?>d<?php } ?></label>
 								</div>
 							</div>
 							<div class="flex">
 								<div class="flex-column">
 									<?php if ($profile_result_settings['profile_picture'] != NULL) { ?>
 										<div class="profile-card-main-about-picture">
-											<img alt="<?= $profile_result['username']; ': Foto de perfil - ' . HOTELNAME; ?>" src="<?= $profile_result_settings['profile_picture']; ?>">
+											<img alt="<?= $profile_result['username']; ': Profile picture - ' . HOTELNAME; ?>" src="<?= $profile_result_settings['profile_picture']; ?>">
 										</div>
 									<?php } else { ?>
 										<div class="profile-card-main-about-picture default">
@@ -128,7 +128,7 @@
 										<div class="flex margin-bottom-minm">
 											<icon name="room" class="margin-right-minm"></icon>
 											<label class="gray-clear">
-												<h5>Brasil</h5>
+												<h5>Brazil</h5>
 											</label>
 										</div>
 										<div class="flex margin-bottom-minm">
@@ -140,7 +140,7 @@
 										<div class="flex">
 											<icon name="display-identity" class="margin-right-minm"></icon>
 											<label class="gray-clear">
-												<h5>Ingressou em <?= utf8_encode(strftime('%d de %B de %Y', $profile_result['account_created'])); ?></h5>
+												<h5>Joined in <?= utf8_encode(strftime('%d de %B de %Y', $profile_result['account_created'])); ?></h5>
 											</label>
 										</div>
 									</div>
@@ -167,7 +167,7 @@
 											} 
 										} else { 
 											?>
-											<div class="profile-card-main-about-badges-display not-badge" tooltip="Sem grupo favorito"></div>
+											<div class="profile-card-main-about-badges-display not-badge" tooltip="No favorite group"></div>
 										<?php } ?>
 										<?php
 										$consult_showed_badges = $db->prepare("SELECT badge_code FROM player_badges WHERE player_id = ? AND slot != 0 LIMIT 0,1");
@@ -184,7 +184,7 @@
 											}
 										} else { 
 											?>
-											<div class="profile-card-main-about-badges-display not-badge" tooltip="Slot de emblema vázio"></div>
+											<div class="profile-card-main-about-badges-display not-badge" tooltip="No emblem slot"></div>
 										<?php } ?>
 										<?php
 										$consult_showed_badges = $db->prepare("SELECT badge_code FROM player_badges WHERE player_id = ? AND slot != 0 LIMIT 1,1");
@@ -201,7 +201,7 @@
 											}
 										} else { 
 											?>
-											<div class="profile-card-main-about-badges-display not-badge" tooltip="Slot de emblema vázio"></div>
+											<div class="profile-card-main-about-badges-display not-badge" tooltip="No badge slot"></div>
 										<?php } ?>
 										<?php
 										$consult_showed_badges = $db->prepare("SELECT badge_code FROM player_badges WHERE player_id = ? AND slot != 0 LIMIT 2,1");
@@ -218,7 +218,7 @@
 											}
 										} else { 
 											?>
-											<div class="profile-card-main-about-badges-display not-badge" tooltip="Slot de emblema vázio"></div>
+											<div class="profile-card-main-about-badges-display not-badge" tooltip="No badge slot"></div>
 										<?php } ?>
 										<?php
 										$consult_showed_badges = $db->prepare("SELECT badge_code FROM player_badges WHERE player_id = ? AND slot != 0 LIMIT 3,1");
@@ -235,7 +235,7 @@
 											}
 										} else { 
 											?>
-											<div class="profile-card-main-about-badges-display not-badge" tooltip="Slot de emblema vázio"></div>
+											<div class="profile-card-main-about-badges-display not-badge" tooltip="No badge slot"></div>
 										<?php } ?>
 										<?php
 										$consult_showed_badges = $db->prepare("SELECT badge_code FROM player_badges WHERE player_id = ? AND slot != 0 LIMIT 4,1");
@@ -252,7 +252,7 @@
 											}
 										} else { 
 											?>
-											<div class="profile-card-main-about-badges-display not-badge" tooltip="Slot de emblema vázio"></div>
+											<div class="profile-card-main-about-badges-display not-badge" tooltip="No badge slot"></div>
 										<?php } ?>
 									</div>
 								</div>
@@ -265,13 +265,13 @@
 						<div class="general-box-header-3 padding-md">
 							<?php if (isset($user['username']) && isset($user['username']) && $profile_result['username'] == $user['username']) { ?>
 								<label class="gray">
-									<h5 class="bold">Meus recados</h5>
-									<h6>O recados que seus amigos(as) te deixam ficam aqui!</h6>
+									<h5 class="bold">My messages</h5>
+									<h6>The messages your friends leave you stay here!</h6>
 								</label>
 							<?php } else { ?>
 								<label class="gray">
-									<h5 class="bold">Recados de <?= $profile_result['username']; ?></h5>
-									<h6>O recados que os amigos(as) de <?= $profile_result['username']; ?> deixam ficam aqui!</h6>
+									<h5 class="bold">Messages from <?= $profile_result['username']; ?></h5>
+									<h6>The messages that friends from<?= $profile_result['username']; ?> they leave here!</h6>
 								</label>
 							<?php } ?> 
 						</div>
@@ -307,9 +307,9 @@
 									<div class="errands-area-box-nothing margin-bottom-minm flex padding-min">
 										<label class="gray margin-auto-left-right">
 											<?php if (isset($user['username']) && $profile_result['username'] == $user['username']) { ?>
-												<h5>Parece que você não tem nenhum recado.</h5>
+												<h5>Looks like you don't have any messages.</h5>
 											<?php } else { ?>
-												<h5>Parece que <b><?= $profile_result['username']; ?></b> não tem nenhum recado.</h5>
+												<h5>It seems <b><?= $profile_result['username']; ?></b> has no message.</h5>
 											<?php } ?>
 										</label>
 									</div>
@@ -318,8 +318,8 @@
 							<?php if (isset($user['username']) && $profile_result['username'] == $user['username']) { ?>
 								<div class="flex margin-top-min">
 									<label class="gray flex-column">
-										<h6 class="fs-12 margin-bottom-minm">Calma lá??!! Você não pode deixar um recado para si mesmo, mas aqui ficam os recados que os seus amigos(as) deixam pra você! Caso algum recado contenha algo ofensivo ou que não lhe agradou, você pode deletar o mesmo, ou em casos mais graves denunciar a pessoa que deixou o recado para a nossa equipe.</h6>
-										<h6>Tire um tempinho para ler a nossa <a class="bold">politica de recados</a> para evitar punições.</h6>
+										<h6 class="fs-12 margin-bottom-minm">Easy there??!! You can't leave a message for yourself, but here are the messages that your friends leave for you! If any message contains something offensive or that did not please you, you can delete it, or in more serious cases report the person who left the message to our team.</h6>
+										<h6>Take some time to read our <a class="bold">political errands</a> to avoid punishment.</h6>
 									</label>
 								</div>
 							<?php } else { 
@@ -334,7 +334,7 @@
 										?>
 										<div class="send-errand-area flex-column margin-top-md" data-profile-name="<?= $profile_result['username']; ?>">
 											<div class="general-contenteditable flex">
-												<div contenteditable="true" placeholder="Digite aqui seu recado para <?= $profile_result['username']; ?>..."></div>
+												<div contenteditable="true" placeholder="Enter your message here for <?= $profile_result['username']; ?>..."></div>
 												<div class="contenteditable-editor flex-column">
 													<button class="reset-button bold" onclick="Style('bold');">B</button>
 													<button class="reset-button italic" onclick="Style('italic');">I</button>
@@ -343,7 +343,7 @@
 											</div>
 											<button class="green-button-2 send-errand-button" style="width: 100%;height: 40px">
 												<label class="white margin-auto">
-													<h5>Enviar recado para <b><?= $profile_result['username']; ?></b></h5>
+													<h5>Send message to <b><?= $profile_result['username']; ?></b></h5>
 												</label>
 											</button>
 											<div class="send-errand-area-warn"></div>
@@ -353,7 +353,7 @@
 										?>
 										<div class="send-errand-area-nofriends">
 											<label class="gray">
-												<h5><b>Você</b> e <b><?= $profile_result['username']; ?></b> precisam ser amigos(as) para poderem trocar recados!</label></h5>
+												<h5><b>You</b> and <b><?= $profile_result['username']; ?></b> need to be friends to be able to exchange messages!</label></h5>
 											</label>
 										</div>
 										<?php 
@@ -368,13 +368,13 @@
 							<div class="general-box-header-3 padding-md">
 								<?php if (isset($user['username']) && $profile_result['username'] == $user['username']) { ?>
 									<label class="gray">
-										<h5 class="bold">Meus emblemas</h5>
-										<h6><text>0</text> de <?= number_format($profile_count_badges); ?> emblemas</h6>
+										<h5 class="bold">My badges</h5>
+										<h6><text>0</text> of <?= number_format($profile_count_badges); ?> badges</h6>
 									</label>
 								<?php } else { ?>
 									<label class="gray">
-										<h5 class="bold">Emblemas de <?= $profile_result['username']; ?></h5>
-										<h6><text>0</text> de <?= number_format($profile_count_badges); ?> emblemas</h6>
+										<h5 class="bold">Badges from <?= $profile_result['username']; ?></h5>
+										<h6><text>0</text> of <?= number_format($profile_count_badges); ?> badges</h6>
 									</label>
 								<?php } ?> 
 							</div>
@@ -470,13 +470,13 @@
 							<div class="general-box-header-3 padding-md">
 								<?php if (isset($user['username']) && $profile_result['username'] == $user['username']) { ?>
 									<label class="gray">
-										<h5 class="bold">Meus quartos</h5>
-										<h6><text>0</text> de <?= number_format($profile_count_rooms); ?> quartos</h6>
+										<h5 class="bold">My rooms</h5>
+										<h6><text>0</text> of <?= number_format($profile_count_rooms); ?> rooms</h6>
 									</label>
 								<?php } else { ?>
 									<label class="gray">
-										<h5 class="bold">Quartos de <?= $profile_result['username']; ?></h5>
-										<h6><text>0</text> de <?= number_format($profile_count_rooms); ?> quartos</h6>
+										<h5 class="bold">Rooms from <?= $profile_result['username']; ?></h5>
+										<h6><text>0</text> of <?= number_format($profile_count_rooms); ?> rooms</h6>
 									</label>
 								<?php } ?> 
 							</div>
@@ -510,11 +510,11 @@
 										<label class="text-center">
 											<?php if (isset($user['username']) && $profile_result['username'] == $user['username']) { ?>
 												<label class="gray">
-													<h6>Você não tem nenhum quarto!</h6>
+													<h6>You don't have any rooms!</h6>
 												</label>
 											<?php } else { ?>
 												<label class="gray">
-													<h6>Parece que <b><?= $profile_result['username']; ?></b> não tem nenhum quarto.</h6>
+													<h6>It seems that <b><?= $profile_result['username']; ?></b> no have any room.</h6>
 												</label>
 											<?php } ?>
 										</label>
@@ -526,13 +526,13 @@
 							<div class="general-box-header-3 padding-md">
 								<?php if (isset($user['username']) && $profile_result['username'] == $user['username']) { ?>
 									<label class="gray">
-										<h5 class="bold">Meus grupos</h5>
-										<h6><text>0</text> de <?= number_format($profile_count_groups); ?> grupos</h6>
+										<h5 class="bold">My groups</h5>
+										<h6><text>0</text> from <?= number_format($profile_count_groups); ?> groups</h6>
 									</label>
 								<?php } else { ?>
 									<label class="gray">
-										<h5 class="bold">Grupos de <?= $profile_result['username']; ?></h5>
-										<h6><text>0</text> de <?= number_format($profile_count_groups); ?> grupos</h6>
+										<h5 class="bold">Groups from <?= $profile_result['username']; ?></h5>
+										<h6><text>0</text> from <?= number_format($profile_count_groups); ?> groups</h6>
 									</label>
 								<?php } ?> 
 							</div>
