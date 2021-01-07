@@ -11,16 +11,12 @@
 	
 
 	$Template->SetParam('page_name', 'Index');
-	$Template->SetParam('page_title', '' . HOTELNAME . ' - Crie sua conta, faça amigos e divirta-se gratuitamente.');
-	$Template->SetParam('page_description', 'No ' . HOTELNAME . ', você pode fazer novos amigos, ganhar eventos, ser o mais rico, jogar e criar os seus próprios jogos, ser famoso, bater-papo, decorar e criar quartos incríveis com uma imensidão de mobílias disponíveis no nosso catálogo. Tudo isso, e muito mais, você encontrar aqui GRATUITAMENTE, o que está esperando para se registar neste incrível universo pixealado e fazer parte do nosso hotel??!!');
+	$Template->SetParam('page_title', '' . HOTELNAME . ' - Create your account, make friends and have fun for free.');
+	$Template->SetParam('page_description', 'No ' . HOTELNAME . ', You can make new friends, win events, be the richest, play and create your own games, be famous, chat, decorate and create amazing rooms with an immensity of furniture available in our catalog. All this, and more, you find here FOR FREE, what is waiting to register in this amazing universe pixealado and be part of our hotel??!!');
 	$Template->SetParam('page_image', '' . URL . '/image.png');
 
 	$Template->AddTemplate('others', 'head');
 ?>
-<!-- 		<script type="text/javascript">
-		window.cookieconsent_options = {"message":"No oHabbo, nós usamos cookies para melhorar a sua experiência no nosso site. Para visitar este site, você concorda com a nossa utilização de cookies.","dismiss":"Eu concordo!","learnMore":"Leia mais","link":"/cookiepolicy","theme":"dark-bottom"};
-		</script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script> -->
 		<?= $Template->AddTemplate('others', 'header'); ?>
 		<div class="webcenter flex-column">
 			<div class="flex col-c-1">
@@ -31,27 +27,27 @@
 								<icon name="pad"></icon>
 							</div>
 							<label class="white flex-column">
-								<h4 class="bold">Área de login</h4>
-								<h5>Faça login para jogar conosco!</h5>
+								<h4 class="bold">Login area</h4>
+								<h5>Sign in to play with us!</h5>
 							</label>
 						</div>
 						<div class="width-content flex inputs-login margin-bottom-min">
 							<div class="identification-look"></div>
-							<input type="text" name="identification" placeholder="Nome de usuário..." class="border-none">
+							<input type="text" name="identification" placeholder="Username..." class="border-none">
 						</div>
 						<div class="width-content flex inputs-login flex">
 							<div class="flex width-content">
 								<icon name="lock-big"></icon>
-								<input type="password" name="password" placeholder="Sua senha..." class="border-none">
+								<input type="password" name="password" placeholder="Password..." class="border-none">
 							</div>
 							<button type="submit" class="lgn-button green-button-1 transition-disabled margin-left-min" style="min-width: 120px;height: 45px;">
 								<label class="margin-auto white">
-									<h5 class="bold fs-14 uppercase">Entrar</h5>
+									<h5 class="bold fs-14 uppercase">Login</h5>
 								</label>
 							</button>
 						</div>
 						<a style="text-decoration:none !important;" href="/forgotpass">
-							<h5 class="forgotpassword">Esqueceu sua senha?</h5>
+							<h5 class="forgotpassword">Forgot you password?</h5>
 						</a>
 					</form>
 					<div class="margin-top-min">
@@ -62,8 +58,8 @@
 									<img class="habbo-imager" src="<?= AVATARIMAGE; ?>figure=hr-115-42.hd-195-19.ch-3030-82.lg-275-1408.fa-1201.ca-1804-64&action=std&direction=2&head_direction=3&gesture=std&size=n&img_format=png&frame=0&headonly=0">
 								</div>
 								<label class="gray-clear margin-auto-top-bottom padding-right-min">
-									<h5 class="bold fs-14">Sem destaque...</h5>
-									<h6>Nenhum usuário(a) destaque em eventos se destacou este mês.</h6>
+									<h5 class="bold fs-14">No highlight...</h5>
+									<h6>No users featured in events stood out this month.</h6>
 								</label>
 							</div>
 						</div>
@@ -73,14 +69,14 @@
 					<div class="general-box register-announcement flex padding-md">
 						<label class="flex-column white">
 							<div class="flex-column padding-minm padding-top-none">
-								<h2 class="bold uppercase">Bem-vindos!</h2>
-								<h5 class="margin-top-min">O <b><?= HOTELNAME; ?></b> é um incrível mundo de pixels onde você pode criar e construir quartos da maneira que quiser com um catalogo com mobílias variadas, bater papo com outros jogadores em outros quartos, participar e ganhar de promoções dentro do hotel, jogar eventos diariamente também dentro do hotel, postar suas fotos, interagir com outros usuários(as) no fórum, ser famoso e rico(a).</h5>
+								<h2 class="bold uppercase">Welcome!</h2>
+								<h5 class="margin-top-min">O <b><?= HOTELNAME; ?></b> is an amazing world of pixels where you can create and build rooms the way you want with a catalog with varied furniture, chat with other players in other rooms, participate and win promotions within the hotel, play daily events also inside the hotel, post your photos, interact with other users on the forum, be famous and rich.</h5>
 							</div>
 							<div class="flex margin-auto-top">
-								<h6 class="margin-auto margin-right-min">Não perca tempo, registre-se agora mesmo e venha viver pessoalmente uma experiência agradável, ou não, aqui no <b><?= HOTELNAME; ?></b></h6>
-								<a href="<?= URL; ?>/register" place="<?= HOTELNAME; ?> - Crie sua conta, faça amigos e divirta-se gratuitamente." class="green-button-1 transition-disabled margin-auto-top-bottom no-link" style="min-width: 150px;height: 50px;">
+								<h6 class="margin-auto margin-right-min">Don't waste time, register right now and come live in person a pleasant experience, or not, here in the <b><?= HOTELNAME; ?></b></h6>
+								<a href="<?= URL; ?>/register" place="<?= HOTELNAME; ?> - Create your account, make friends and have fun for free." class="green-button-1 transition-disabled margin-auto-top-bottom no-link" style="min-width: 150px;height: 50px;">
 									<label class="margin-auto white">
-										<h5 class="bold fs-14 uppercase">Criar conta</h5>
+										<h5 class="bold fs-14 uppercase">Register</h5>
 									</label>
 								</a>
 							</div>
