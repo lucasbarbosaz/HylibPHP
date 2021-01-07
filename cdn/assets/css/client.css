@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Ubuntu, sans-serif;
+}
+
+html,
+body,
+#flash-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden!important;
+    display: flex!important;
+}
+
+.webview-client {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    left: 0;
+}
+
+.client-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    z-index: 999999;
+}
+
+.client-back::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -40px;
+    border-width: 19px;
+    border-color: rgba(0, 0, 0, 0) rgb(98, 196, 82) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-style: solid;
+}
+
+.client-back {
+    position: relative;
+    background: rgb(88, 176, 62);
+    height: 38px;
+    border: 3px solid rgb(98, 196, 82);
+    border-left-width: 2px;
+    margin: 0 0 0 20px;
+    filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.3));
+}
+
+.client-back::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -32px;
+    border-width: 16px;
+    border-color: rgba(0, 0, 0, 0) rgb(88, 176, 62) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-style: solid;
+}
+
+.client-expand,
+.client-unfreeze,
+.client-refresh {
+    position: relative;
+    background: rgb(231, 233, 233);
+    width: 38px;
+    height: 38px;
+    border: 3px solid rgb(251, 252, 252);
+    filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.3));
+}
+
+.client-back:active,
+.client-expand:active,
+.client-unfreeze:active,
+.client-refresh:active {
+    top: 1px;
+    -webkit-filter: drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.3));
+}
+
+.event-alert {
+    position: absolute;
+    background: #dd7140;
+    width: 500px;
+    height: 286px;
+    border-radius: 0px 5px 5px 0px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.event-alert > .event-alert-image {
+    position: absolute;
+    background: url('/api/assets/img/habbo_run.png') 134% 180% / auto no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.event-alert > .event-alert-label > h3 {
+    font-size: 26px;
+}
+
+.event-alert-promoter {
+    margin: -10px 0 -10px -20px;
+}
+
+.event-alert-promoter > .event-alert-promoter-imager {
+    position: relative;
+    margin: -8px 0 0 0;
+    height: 64px;
+    z-index: 1;
+}
+
+.event-alert-promoter > label {
+    position: relative;
+    background: #0000004d;
+    border-radius: 0px 5px 5px 0px;
+    padding: 7px 12px 7px 25px;
+    margin: auto 0 auto -30px;
+}
+
+.event-alert-promoter > label h5 {}
+
+.event-alert-promoter > label h6 {
+    margin: auto 0 auto 6px;
+}
+
+.event-alert-interaction-close {
+    position: relative;
+    background: rgb(214, 59, 48);
+    border: 3px solid #F44336;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 0 10px 0 0;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.event-alert-interaction-close:hover {
+    background: #de3c30
+}
+
+.event-alert-interaction-close:active {
+    background: #c7372d;
+    top: 1px;
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.event-alert-interaction-go {
+    position: relative;
+    background: #4CAF50;
+    border: 3px solid #59ce5e;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.event-alert-interaction-go:hover {
+    background: #4fb754
+}
+
+.event-alert-interaction-go:active {
+    background: #46a24a;
+    top: 1px;
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.habbo-container {
+    position: relative;
+    background: #E9E9E1;
+    width: 487px;
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 0 2px #FFFFFF, 0px 2px 0 0px #000000;
+    float: left;
+    margin: 0 0 2px 0;
+    overflow: hidden;
+    z-index: 8;
+}
+
+.habbo-container.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.habbo-container.blue {}
+
+.habbo-container.blue > .habbo-container-header {
+    position: relative;
+    background: #408caf;
+    height: 31px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    z-index: 0!important;
+}
+
+.habbo-container.blue > .habbo-container-header::before {
+    content: "";
+    position: absolute;
+    background: #367897;
+    width: calc(100% - 4px);
+    height: calc(100% - 2px);
+    border: 2px solid #408CAF;
+    border-bottom: none;
+    border-radius: 7px 7px 0px 0px;
+    top: 0;
+    left: 0;
+}
+
+.habbo-container > .habbo-container-header:hover {
+    cursor: -webkit-grab;
+}
+
+.habbo-container.ui-draggable-dragging > .habbo-container-header {
+    cursor: -webkit-grabbing;
+}
+
+.habbo-container.blue > .habbo-container-header > label {
+    position: relative;
+    color: #fff;
+    margin: auto;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.habbo-container.blue >  button.habbo-container-close {
+    position: absolute;
+    background: url('/cdn/assets/img/sprite_habbo.png') no-repeat -1px -1px;
+    width: 19px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    margin: 6px 7px 0px 6px;
+    image-rendering: pixelated;
+    border: none;
+}
+
+.habbo-container.blue > button.habbo-container-close:hover {
+    background: url('/cdn/assets/img/sprite_habbo.png') no-repeat -1px -22px;
+    cursor: pointer;
+}
+
+.habbo-container.blue > button.habbo-container-close:active {
+    top: 1px;
+    background: url('/cdn/assets/img/sprite_habbo.png') no-repeat -1px -43px;
+}
+
+.habbo-container.blue > .habbo-container-navigation {
+    height: calc(100% - 31px);
+}
+
+.habbo-container.blue > .habbo-container-navigation > li.habbo-container-navigation-option {}
+
+.habbo-container.blue > .habbo-container-navigation > li.habbo-container-navigation-option > label {}
+
+iframe.roomvideo-iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.loader-client {
+    position: fixed;
+    background: url(/cdn/assets/img/background.png) rgb(226, 226, 226);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.loader-client::before {
+    content: "";
+    position: absolute;
+    width: 554px;
+    height: 530px;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+.loader-client > .loader-client-content {
+    width: 580px;
+    float: left;
+}
+
+.loader-client > .loader-client-content > .loader-client-photos {
+    margin: 0 auto;
+}
+
+.loader-client > .loader-client-content > .loader-client-photos span::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(#0000, #000000c7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.loader-client > .loader-client-content > .loader-client-photos span:nth-child(1) {
+    position: relative;
+    background: center center / contain no-repeat scroll rgb(218, 218, 218);
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+    margin: auto -130px auto 0px;
+    opacity: 0.8;
+    box-shadow: 0 0 20px 10px #0000001a;
+    overflow: hidden;
+}
+
+.loader-client > .loader-client-content > .loader-client-photos span:nth-child(2) {
+    position: relative;
+    background: center center / contain no-repeat scroll rgb(218, 218, 218);
+    width: 320px;
+    height: 320px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px #0000002b;
+    overflow: hidden;
+    display: flex;
+    z-index: 1;
+}
+
+.loader-client > .loader-client-content > .loader-client-photos span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    background: url('/cdn/assets/img/sprite.png') no-repeat -5px -121px;
+    width: 142px;
+    height: 37px;
+    top: 15px;
+    right: 15px;
+}
+
+.loader-client > .loader-client-content > .loader-client-photos span:nth-child(3) {
+    position: relative;
+    background: center center / contain no-repeat scroll rgb(218, 218, 218);
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+    margin: auto 0px auto -130px;
+    opacity: 0.8;
+    box-shadow: 0 0 20px 10px #0000001a;
+    overflow: hidden;
+}
+
+.loader-client-photo-user {
+    margin: auto 0 4px 5px;
+    pointer-events: none;
+}
+
+.loader-client-photo-user > .loader-client-photo-user-image {
+    height: 70px;
+    margin: -5px 0 0 0;
+    filter: drop-shadow(0px -1px #fff) drop-shadow(0px 1px #fff) drop-shadow(1px 0px #fff) drop-shadow(-1px 0px #fff);
+    -webkit-filter: drop-shadow(0px -1px #fff) drop-shadow(0px 1px #fff) drop-shadow(1px 0px #fff) drop-shadow(-1px 0px #fff);
+    -o-filter: drop-shadow(0px -1px #fff) drop-shadow(0px 1px #fff) drop-shadow(1px 0px #fff) drop-shadow(-1px 0px #fff);
+    -ms-filter: drop-shadow(0px -1px #fff) drop-shadow(0px 1px #fff) drop-shadow(1px 0px #fff) drop-shadow(-1px 0px #fff);
+    -moz-filter: drop-shadow(0px -1px #fff) drop-shadow(0px 1px #fff) drop-shadow(1px 0px #fff) drop-shadow(-1px 0px #fff);
+}
+
+.loader-client-photo-user > h4 {
+    margin: auto 0 auto 0;
+    font-size: 24px;
+}
+
+.loader-client > .loader-client-content > .loader-client-words {
+    color: #6b6b6b;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    white-space: nowrap;
+    margin: 30px 0 0 0;
+}
+
+.client-disconnected::before {
+    content: "";
+    position: absolute;
+    background: #000000d6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.client-disconnected {
+    position: fixed;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.client-disconnected > div > label > h1 {
+    font-size: 40px;
+    font-family: Ubuntu Condensed, sans-serif!important;
+}
+
+.client-notification {
+    position: absolute;
+    width: 0;
+    height: inherit;
+    top: 66px;
+    left: 0;
+    z-index: 10;
+}
+
+.client-notification-mention {
+    position: absolute;
+    left: -350px;
+    margin: 0 0 0 -10px;
+    float: left;
+}
+
+.client-notification-mention > div.flex > .client-notification-mention-imager {
+    position: relative;
+    width: 64px;
+    height: 70px;
+    margin: -20px 0 0 0;
+    overflow: hidden;
+    -webkit-filter: drop-shadow(0px 2px #0006);
+}
+
+.client-notification-mention > div.flex > .client-notification-content {
+    position: relative;
+    background: #fff;
+    width: 181px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #00000070;
+}
+
+.client-notification-mention > div.flex > .client-notification-content::before {
+    content: "";
+    position: absolute;
+    background: url('/cdn/assets/img/arrobas.png') 100% 100% / auto no-repeat scroll #fff;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.client-notification-mention > div.flex > .client-notification-content > .client-notification-content-message {
+    position: relative;
+    background: #e8e8e8;
+    color: #9a9a9a;
+    border-radius: 5px;
+    margin-top: -3px!important;
+    word-break: break-all;
+}
+
+.client-notification-mention > .client-notification-mention-close {
+    position: absolute;
+    background: #ec3333;
+    width: 25px;
+    height: 25px;
+    top: 55px;
+    left: 21px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    z-index: 1;
+}
+
+.client-notification-mention > .client-notification-mention-close::before {
+    content: "";
+    position: relative;
+    background: url('/cdn/assets/img/sprite.png') no-repeat -1142px -433px;
+    width: 11px;
+    height: 12px;
+    margin: auto;
+    pointer-events: none;
+}
+
+.client-notification-closeall {
+    position: relative;
+    background: rgb(236, 51, 51);
+    width: 226px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding: 12px 0px;
+    margin: 0px 0px 18px 10px;
+    display: none;
+}
+
+.client-version-container,
+.flash-disabled-container {
+    position: relative;
+    background: url(../img/background.png) rgb(226, 226, 226);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.client-version-content,
+.flash-disabled-content {
+    max-width: 620px;
+}
+
+.frank {
+    position: relative;
+    background: url('../img/frank.png') 0 0 / auto no-repeat;
+    min-width: 228px;
+    height: 368px;
+}
+
+@-webkit-keyframes fade-in-out {
+    50% {
+        opacity: 0.8;
+    }
+
+    0%, 100% {
+        opacity: 0.3;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(-0deg);
+        -webkit-transform: rotate(-0deg);
+        -o-transform: rotate(-0deg);
+        -ms-transform: rotate(-0deg);
+        -moz-transform: rotate(-0deg);
+    }
+}
+
+audio.stream-audio {
+    display: none;
+}
+
+.haibbo-player-area {
+    position: absolute;
+    width: 0;
+    height: calc(100% - 70px);
+    top: 0;
+    left: 0;
+    margin: 60px 0 0 0;
+    z-index: 999999;
+}
+
+.haibbo-player {
+    position: absolute;
+    width: 0;
+    height: fit-content;
+    left: 0px!important;
+    opacity: 1;
+    transition: left 0.5s, opacity 1s ease-in-out;
+    -webkit-transition: left 0.5s, opacity 1s ease-in-out;
+    -o-transition: left 0.5s, opacity 1s ease-in-out;
+    -ms-transition: left 0.5s, opacity 1s ease-in-out;
+    -moz-transition: left 0.5s, opacity 1s ease-in-out;
+}
+
+.haibbo-player-large {
+    width: 300px;
+    transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -moz-transition: left 0.5s ease-in-out;
+}
+
+.haibbo-player.loadding {
+    pointer-events: none;
+    opacity: 0.8;
+    transition: left 0.5s, opacity 1s ease-in-out;
+    -webkit-transition: left 0.5s, opacity 1s ease-in-out;
+    -o-transition: left 0.5s, opacity 1s ease-in-out;
+    -ms-transition: left 0.5s, opacity 1s ease-in-out;
+    -moz-transition: left 0.5s, opacity 1s ease-in-out;
+}
+
+.haibbo-player-large-area {
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 300px;
+    height: 85px;
+    border: 2px solid #f7f7f7;
+    border-radius: 5px;
+    float: left;
+    overflow: hidden;
+    display: flex;
+}
+
+.haibbo-player-speaker {
+    position: relative;
+    background: rgb(113, 190, 255);
+    width: 75px;
+    height: 100%;
+    display: flex;
+}
+
+.haibbo-player-speaker::after {
+    content: "";
+    position: absolute;
+    background: url(../img/radio/microphone.png) 0 0 / auto no-repeat scroll;
+    width: 26px;
+    height: 45px;
+    right: 10px;
+    bottom: -15px;
+}
+
+.haibbo-player-speaker-imager {
+    position: relative;
+    background: url(../img/habbo_ghost.png) 0 0 / auto no-repeat scroll;
+    width: 64px;
+    height: 94px;
+    margin: auto 0 0 0;
+}
+
+.haibbo-player-infos {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+.haibbo-player-infos-speaker,
+.haibbo-player-infos-programation,
+.haibbo-player-infos-listeners {
+    position: relative;
+    background: #f7f7f7;
+    height: 27px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+}
+
+.haibbo-player-infos-speaker::before {
+    content: "";
+    position: relative;
+    background: url('../img/radio/dj.png') 0 0 / auto no-repeat scroll;
+    min-width: 10px;
+    height: 11px;
+    margin: auto 10px auto 10px;
+}
+
+.haibbo-player-infos-programation {
+    background: #fbfbfb;
+}
+
+.haibbo-player-infos-programation::before {
+    content: "";
+    position: relative;
+    background: url('../img/radio/room.png');
+    min-width: 17px;
+    height: 18px;
+    margin: auto 7px auto 6px;
+}
+
+.haibbo-player-infos-listeners::before {
+    content: "";
+    position: relative;
+    background: url('../img/radio/listeners.png') 0 0 / auto no-repeat scroll;
+    min-width: 13px;
+    height: 13px;
+    margin: auto 8px auto 9px;
+}
+
+.haibbo-player-infos-speaker > span,
+.haibbo-player-infos-programation > span,
+.haibbo-player-infos-listeners > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #a7a7a7;
+    padding: 0 5px 0 0;
+    margin: auto 0;
+}
+
+.haibbo-player-large-control {
+    position: relative;
+    background: rgb(214, 214, 214);
+    min-width: 17px;
+    display: flex;
+}
+
+.haibbo-player-large-control::after {
+    content: "";
+    position: relative;
+    background: url(../img/sprite.png) no-repeat -957px -221px;
+    width: 8px;
+    height: 12px;
+    margin: auto;
+    pointer-events: none;
+}
+
+.player-min.haibbo-player-large-control {
+    position: absolute;
+    background: rgb(214, 214, 214);
+    width: 15px;
+    height: 85px;
+    left: -12px;
+    border: 2px solid #f7f7f7;
+    border-radius: 0px 6px 6px 0px;
+    display: flex;
+    transition: left 0.5s ease-in-out;
+}
+
+.player-min.haibbo-player-large-control::after {
+    content: "";
+    position: relative;
+    background: url(../img/sprite.png) no-repeat -957px -221px;
+    width: 8px;
+    height: 12px;
+    margin: auto;
+    pointer-events: none;
+}
+
+.haibbo-player-large-control:hover {
+    cursor: pointer;
+}
+
+.haibbo-player.maximized > .player-min.haibbo-player-large-control {
+    left: -38px;
+    transition: left 0.5s ease-in-out;
+}
+
+.haibbo-player.minimized > .player-min.haibbo-player-large-control {
+    left: -2px;
+    transition: left 0.5s ease-in-out;
+}
+
+.haibbo-player.maximized > .haibbo-player-large {
+    left: 10px;
+    transition: all 0.5s ease-in-out;
+    filter: drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.3));
+    -o-filter: drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.3));
+    -ms-filter: drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.3));
+    -moz-filter: drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.3));
+    padding: 0 0 3px 0;
+}
+
+.haibbo-player.minimized > .haibbo-player-large {
+    left: -310px;
+    transition: all 0.5s ease-in-out;
+}
+
+.player-large-actions {
+    margin: 10px 0 0 0;
+}
+
+.player-large-actions-volume {
+    position: relative;
+    background: #fbfbfb;
+    min-width: 115px;
+    height: 30px;
+    border: 2px solid #f7f7f7;
+    border-radius: 3px;
+    padding: 0 12px;
+    margin: 0 10px 0 0;
+    display: flex;
+}
+
+.player-large-actions-volume-bar {
+    position: relative;
+    background: #e4e4e4;
+    width: 100%;
+    height: 10px;
+    border-radius: 100px;
+    margin: auto 0;
+}
+
+.player-large-actions-volume-bar div {
+    position: relative;
+    background: #c3c3c3;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.player-large-actions-volume-bar span {
+    position: absolute;
+    background: #a2a2a2;
+    width: 14px;
+    height: 14px;
+    top: -2px;
+    border-radius: 50%;
+    margin: 0px 0px 0px -7px;
+    display: flex;
+    outline: none;
+}
+
+.player-large-actions-playpause,
+.player-large-actions-dragplayer,
+.player-large-actions-reconnect {
+    position: relative;
+    background: #fbfbfb;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #f7f7f7;
+    border-radius: 3px;
+    margin: 0 5px 0 0;
+    display: flex;
+}
+
+.player-large-actions > div:hover {
+    cursor: pointer;
+} 
+
+.player-large-actions > div:before {
+    pointer-events: none;
+}
+
+.player-large-actions-playpause.played::before {
+    content: "";
+    position: relative;
+    background: url(../img/radio/sprite.png) no-repeat -14px -2px;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+}
+
+.player-large-actions-playpause.paused::before {
+    content: "";
+    position: relative;
+    background: url(../img/radio/sprite.png) no-repeat -2px -2px;
+    width: 10px;
+    height: 15px;
+    margin: auto;
+}
+
+.player-large-actions-reconnect:before {
+    content: "";
+    position: relative;
+    background: url('../img/radio/sprite.png') no-repeat -31px -2px;
+    width: 17px;
+    height: 16px;
+    margin: auto;
+}
+
+.player-large-actions-dragplayer::before {
+    content: "";
+    position: relative;
+    background: url('../img/radio/sprite.png') no-repeat -49px -1px;
+    width: 12px;
+    height: 18px;
+    margin: auto;
+}
+
+.haibbo-player.loadding > .haibbo-player-large > .player-large-actions > .player-large-actions-reconnect:before {
+    width: 17px;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    -ms-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    image-rendering: pixelated;
+}

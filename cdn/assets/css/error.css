@@ -1,0 +1,47 @@
+body {
+	margin: auto;
+    padding: 0 10px;
+    font-family: Ubuntu, sans-serif;
+    display: flex;
+}
+
+#error-container {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+#error-image {
+    position: relative;
+    background: url('../img/error.png');
+    width: 179px;
+    height: 184px;
+    margin: auto;
+}
+
+#error-label {
+    color: rgb(34, 34, 34);
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+#error-label-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#error-label-description {
+	font-size: 14px;
+}
+
+#error-button-back {
+    position: relative;
+    background: rgb(255, 0, 0);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}

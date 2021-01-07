@@ -1,0 +1,263 @@
+.label {
+    color: #fff
+}
+
+#loading .label {
+    display: inline-block;
+    margin: 0 5px 20px;
+    padding: 3px 8px;
+    color: #aaa !important;
+    text-shadow: 0 1px #000;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.radio:checked + .label {
+    color: #fff;
+    background: rgba(0, 0, 0, .25)
+}
+
+.carregando {
+    margin: 0 auto;
+    width: auto;
+    z-index: 1000;
+    position: absolute
+}
+
+    .carregando .progress {
+        margin: 0 auto;
+        width: 400px
+    }
+
+.progress {
+    padding: 4px;
+    background: rgba(0, 0, 0, .25);
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25), 0 1px rgba(255, 255, 255, .08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25), 0 1px rgba(255, 255, 255, .08)
+}
+
+.progress-bar {
+    position: relative;
+    height: 16px;
+    border-radius: 4px;
+    -webkit-transition: .4s linear;
+    -moz-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .25), inset 0 1px rgba(255, 255, 255, .1);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .25), inset 0 1px rgba(255, 255, 255, .1)
+}
+
+    .progress-bar:after,
+    .progress-bar:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0
+    }
+
+    .progress-bar:before {
+        bottom: 0;
+        /* background: url(http://files.cssflow.com/snippets/22-progress-bar-anim/img/stripes.png) 0 0 repeat; */
+        border-radius: 4px 4px 0 0
+    }
+
+    .progress-bar:after {
+        z-index: 2;
+        bottom: 45%;
+        border-radius: 4px;
+        background-image: -webkit-linear-gradient(top, rgb(151 88 255 / 30%), rgb(35 29 82 / 55%));
+        background-image: -moz-linear-gradient(top, rgb(151 88 255 / 30%), rgb(35 29 82 / 55%));
+        background-image: -o-linear-gradient(top, rgb(151 88 255 / 30%), rgb(35 29 82 / 55%))
+    }
+
+#five:checked ~ .progress > .progress-bar {
+    width: 5%;
+    background-color: #f63a0f
+}
+
+#twentyfive:checked ~ .progress > .progress-bar {
+    width: 25%;
+    background-color: #f27011
+}
+
+#fifty:checked ~ .progress > .progress-bar {
+    width: 50%;
+    background-color: #f2b01e
+}
+
+#seventyfive:checked ~ .progress > .progress-bar {
+    width: 75%;
+    background-color: #f2d31b
+}
+
+#onehundred:checked ~ .progress > .progress-bar {
+    width: 100%;
+    background-color: #86e01e
+}
+
+.radio {
+    display: none;
+    pointer-events: auto
+}
+
+#socket-load {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: digitando 3.5s steps(40, end), efeitos .75s step-end infinite;
+    font-size: 23px;
+    color: red;
+    margin-left: 47px
+}
+
+@keyframes digitando {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes efeitos {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+
+#loading {
+    background: /*url(https://i.imgur.com/YiLGkXY.png) no-repeat right bottom,*/ linear-gradient(to bottom, #833098, #210c50);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    display: none;
+    pointer-events: none
+}
+
+    #loading .resize {
+        width: 440px;
+        -webkit-transform: translateY(85%);
+        padding: 40px;
+        margin: 0 auto
+    }
+
+    #loading .banner {
+        width: 100%;
+    }
+
+    #loading h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: "Source Sans Pro", sans-serif;
+        color: #fff;
+        font-size: 1.75rem;
+        font-weight: 700
+    }
+.flash-button {
+    background-color: #9938bc;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-family: Arial;
+    font-size: 19px;
+    padding: 12px 76px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+    pointer-events: auto
+}
+
+    .flash-button:hover {
+        background: linear-gradient(to bottom, #9938bc 5%, #c178c2 100%);
+        background-color: #9938bc;
+    }
+
+    .flash-button:active {
+        position: relative;
+        top: 1px
+    }
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px
+}
+
+    .lds-ellipsis div {
+        position: absolute;
+        top: 27px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0)
+    }
+
+        .lds-ellipsis div:nth-child(1) {
+            left: 6px;
+            animation: lds-ellipsis1 .6s infinite
+        }
+
+        .lds-ellipsis div:nth-child(2) {
+            left: 6px;
+            animation: lds-ellipsis2 .6s infinite
+        }
+
+        .lds-ellipsis div:nth-child(3) {
+            left: 26px;
+            animation: lds-ellipsis2 .6s infinite
+        }
+
+        .lds-ellipsis div:nth-child(4) {
+            left: 45px;
+            animation: lds-ellipsis3 .6s infinite
+        }
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(0)
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(19px, 0)
+    }
+}

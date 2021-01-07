@@ -1,0 +1,200 @@
+.green-button-1,
+.green-button-2,
+.gray-button-1,
+.purple-button-1,
+.blue-button-1 {
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+}
+
+.green-button-1::before,
+.green-button-2::before,
+.gray-button-1::before,
+.purple-button-1::before,
+.blue-button-1::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    top: 0;
+    left: 0;
+    border-radius: 3px 3px 0px 0px;
+    margin: 5px;
+}
+
+/* Botão grande verde */
+
+.green-button-1::before {
+    background: linear-gradient(rgb(160, 104, 184) 50%, transparent 50%);
+}
+
+.green-button-1 {
+    background: rgb(142, 68, 173);
+    border: 1px solid rgb(122 54 150);
+}
+
+.green-button-1:hover:before {
+    background: linear-gradient(rgb(174 114 199) 50%, transparent 50%);
+}
+
+.green-button-1:hover {
+    background: rgb(134 64 162);
+    cursor: pointer;
+}
+
+.green-button-1:active:before {
+    background: linear-gradient(rgb(196, 129, 224) 50%, transparent 50%);
+}
+
+.green-button-1:active {
+    background: rgb(154, 74, 185);
+}
+
+.green-button-2::before {
+    background: linear-gradient(rgb(112, 196, 110) 50%, transparent 50%);
+}
+
+.green-button-2 {
+    background: rgb(89, 186, 86);
+    border: unset;
+}
+
+.green-button-2:hover {
+    background: rgb(104, 193, 102);
+}
+
+.green-button-2:hover:before {
+    background:  linear-gradient(rgb(125, 202, 124) 50%, transparent 50%);
+}
+
+.green-button-2:active {
+    background: rgb(85, 175, 82);
+}
+
+.green-button-2:active:before {
+    background:  linear-gradient(rgb(92, 189, 89) 50%, transparent 50%);
+}
+
+/* Botão grande cinza */
+
+.gray-button-1::before {
+    background: linear-gradient(rgb(227, 225, 225) 50%, transparent 50%);
+}
+
+.gray-button-1 {
+    background: rgb(210, 208, 208);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 1px rgb(0, 0, 0);
+    margin: 0 0 1px 0;
+}
+
+.gray-button-1:hover:before {
+    background: linear-gradient(rgb(236, 234, 234) 50%, transparent 50%);
+}
+
+.gray-button-1:hover {
+    background: rgb(216, 214, 214);
+    cursor: pointer;
+}
+
+.gray-button-1:active:before {
+    background: linear-gradient(rgb(219, 215, 215) 50%, transparent 50%);
+}
+
+.gray-button-1:active {
+    background: rgb(201, 197, 197);
+}
+
+/* Botão roxo escuro */
+
+.purple-button-1::before {
+    background: linear-gradient(rgb(129, 74, 168) 50%, transparent 50%);
+}
+
+.purple-button-1 {
+    background: rgb(104, 60, 136);
+    border: 1px solid rgb(87, 50, 114);
+}
+
+.purple-button-1:hover:before {
+    background: linear-gradient(rgb(145, 92, 184) 50%, transparent 50%);
+}
+
+.purple-button-1:hover {
+    background: rgb(121, 70, 159);
+    cursor: pointer;
+}
+
+.purple-button-1:active:before {
+    background: linear-gradient(rgb(125, 72, 162) 50%, transparent 50%);
+}
+
+.purple-button-1:active {
+    background: rgb(99, 57, 130);
+}
+
+/* Botão azul */
+
+.blue-button-1::before {
+    background: linear-gradient(rgb(86, 145, 192) 50%, transparent 50%);
+}
+
+.blue-button-1 {
+    background: rgb(62, 121, 169);
+    border: 1px solid rgb(57, 112, 155);
+}
+
+.blue-button-1:hover:before {
+    background: linear-gradient(rgb(91, 154, 204) 50%, transparent 50%);
+}
+
+.blue-button-1:hover {
+    background: rgb(73, 137, 189);
+    cursor: pointer;
+}
+
+.blue-button-1:active:before {
+    background: linear-gradient(rgb(82, 139, 184) 50%, transparent 50%);
+}
+
+.blue-button-1:active {
+    background: rgb(60, 116, 162);
+}
+
+/* Botão grande amarelo */
+
+.yellow-button-1::before {
+    background: linear-gradient(rgb(255, 204, 70) 50%, transparent 50%);
+}
+
+.yellow-button-1 {
+    background: rgb(255, 185, 0);
+    border: 1px solid rgb(236, 171, 0);
+}
+
+.yellow-button-1:hover:before {
+    background: linear-gradient(rgb(255, 209, 90) 50%, transparent 50%);
+}
+
+.yellow-button-1:hover {
+    background: rgb(255, 193, 29);
+    cursor: pointer;
+}
+
+.yellow-button-1:active:before {
+    background: linear-gradient(rgb(240, 192, 67) 50%, transparent 50%);
+}
+
+.yellow-button-1:active {
+    background: rgb(243, 177, 0);
+}
+
+.green-button-1 label,
+.green-button-2 label,
+.gray-button-1 label,
+.purple-button-1 label,
+.blue-button-1 label,
+.yellow-button-1 label {
+    pointer-events: none;
+}
