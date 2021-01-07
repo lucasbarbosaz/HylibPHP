@@ -8,7 +8,7 @@
 			if (empty($identification) || empty($password)) {
 				echo json_encode([
 					"response" => 'error',
-					"message" => 'Você precisa fornecer seu <b>nome de usuário</b> e <b>senha</b> para fazer login.'
+					"message" => 'You need to provide your username and password to sign in.'
 				]);
 			} else {
 				$consult_user = $db->prepare("SELECT id,username,password,account_disabled,machine_id,ip_register,ip_current FROM players WHERE username = ?");
@@ -40,12 +40,12 @@
 							if ($timestamp_ban == '0') {
 								echo json_encode([
 									"response" => 'error',
-									"message" => 'Sua conta foi banida permanentemente do hotel pelo seguinte motivo: ' . $result_user_ban['reason']
+									"message" => 'Your account has been permanently banned from the hotel for the following reasons: ' . $result_user_ban['reason']
 								]);
 							} else if ($timestamp_now < $timestamp_ban) {
 								echo json_encode([
 									"response" => 'error',
-									"message" => 'Sua conta foi banida até <b>' . utf8_encode(strftime('%d de %B de %Y', $result_user_ban['expire'])) . '</b> pelo seguinte motivo: ' . $result_user_ban['reason']
+									"message" => 'Your account has been banned until: <b>' . utf8_encode(strftime('%d de %B de %Y', $result_user_ban['expire'])) . '</b> for the following reason: ' . $result_user_ban['reason']
 								]);
 							} else if ($timestamp_now > $timestamp_ban) {
 								$delete_user_ban = $db->prepare("DELETE FROM bans WHERE data = ?");
@@ -55,12 +55,12 @@
 								if ($type == 'staff' && $result_user['rank'] < 5) {
 									echo json_encode([
 										"response" => 'error',
-										"message" => 'No momento, <b>apenas membros da equipe<b> pode fazer login.'
+										"message" => 'Currently, only staff members can log in.'
 									]);
 								} else if ($type == 'permissions' && $result_user['staff_access'] == '0') {
 									echo json_encode([
 										"response" => 'error',
-										"message" => 'No momento apenas <b>usuários(a) com permissão</b> podem fazer login.'
+										"message" => 'Currently only users with permission can log in.'
 									]);
 								} else {
 									session_regenerate_id();
@@ -116,12 +116,12 @@
 							if ($type == 'staff' && $result_rank['rank'] < 5) {
 								echo json_encode([
 									"response" => 'error',
-									"message" => 'No momento, <b>apenas membros da equipe<b> pode fazer login.'
+									"message" => 'At this time, only staff members can sign in.'
 								]);
 							} else if ($type == 'permissions' && $result_user['staff_access'] == '0') {
 								echo json_encode([
 									"response" => 'error',
-									"message" => 'No momento apenas <b>usuários(as) com permissão</b> podem fazer login.'
+									"message" => 'Currently only users with permission can log in.'
 								]);
 							} else {
 								session_regenerate_id();
@@ -159,13 +159,13 @@
 					} else {
 						echo json_encode([
 							"response" => 'error',
-							"message" => 'O nome de usuário ou senha estão <b>incorretos</b>.'
+							"message" => 'The username or password is <b>incorrect</b>.'
 						]);
 					}
 				} else {
 					echo json_encode([
 						"response" => 'error',
-						"message" => 'Não foi possivel encontrar nenhuma conta com os dados fornecidos.'
+						"message" => 'It was not possible to find any account with the data provided.'
 					]);
 				}
 			}
