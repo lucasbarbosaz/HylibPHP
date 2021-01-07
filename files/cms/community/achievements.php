@@ -22,12 +22,12 @@
 					<icon name="fame"></icon>
 				</div>
 				<div class="flex">
-					<a href="<?= URL . '/community/halloffame/fame'; ?>" place="Comunidade: Hall da Fama - <?= HOTELNAME; ?>" class="another-header-menu-option">
-						<label>Riqueza</label>
+					<a href="<?= URL . '/community/halloffame/fame'; ?>" place="Community: Hall of Fame - <?= HOTELNAME; ?>" class="another-header-menu-option">
+						<label>Wealth</label>
 					</a>
 					<separator></separator>
-					<a href="<?= URL . '/community/halloffame/achievements'; ?>" place="Comunidade: Hall da Fama - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
-						<label>Conquistas</label>
+					<a href="<?= URL . '/community/halloffame/achievements'; ?>" place="Community: Hall of Fame - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
+						<label>Achievements</label>
 					</a>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 					?>
 						<div class="first-famous-habbo">
 							<div class="first-famous-habbo-banner events">
-								<label>Eventos</label>
+								<label>Events</label>
 							</div>
 							<div class="flex">
 								<div class="first-famous-habbo-imager">
@@ -54,7 +54,7 @@
 								<div class="flex margin-auto-top-bottom width-content">
 									<label class="gray flex-column margin-auto-top-bottom">
 										<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_events['username']; ?>" place="Perfil: <?= $result_achievements_events['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_events['username']; ?></a></h5>
-										<h6>por ganhar <b><?= number_format($result_achievements_events['event_points']); ?></b> eventos</h6>
+										<h6>by winning <b><?= number_format($result_achievements_events['event_points']); ?></b> events</h6>
 									</label>
 									<div class="trophy flex">
 										<icon name="gold-trophy"></icon>
@@ -79,7 +79,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_events['username']; ?>" place="Perfil: <?= $result_achievements_events['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_events['username']; ?></a></h5>
-									<h6>por ganhar <b><?= number_format($result_achievements_events['event_points']); ?></b> eventos</h6>
+									<h6>by winning <b><?= number_format($result_achievements_events['event_points']); ?></b> events</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="silver-trophy"></icon>
@@ -103,7 +103,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_events['username']; ?>" place="Perfil: <?= $result_achievements_events['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_events['username']; ?></a></h5>
-									<h6>por ganhar <b><?= number_format($result_achievements_events['event_points']); ?></b> eventos</h6>
+									<h6>by winning <b><?= number_format($result_achievements_events['event_points']); ?></b> events</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="bronze-trophy"></icon>
@@ -126,7 +126,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_events['username']; ?>" place="Perfil: <?= $result_achievements_events['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_events['username']; ?></a></h5>
-									<h6>por ganhar <b><?= number_format($result_achievements_events['event_points']); ?></b> eventos</h6>
+									<h6>by winning <b><?= number_format($result_achievements_events['event_points']); ?></b> events</h6>
 								</label>
 							</div>
 						</div>
@@ -143,7 +143,7 @@
 					?>
 						<div class="first-famous-habbo">
 							<div class="first-famous-habbo-banner promotions">
-								<label>Promoções</label>
+								<label>Promotions</label>
 							</div>
 							<div class="flex">
 								<div class="first-famous-habbo-imager">
@@ -152,7 +152,7 @@
 								<div class="flex margin-auto-top-bottom width-content">
 									<label class="gray flex-column margin-auto-top-bottom">
 										<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_promotions['username']; ?>" place="Perfil: <?= $result_achievements_promotions['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_promotions['username']; ?></a></h5>
-										<h6>por ganhar <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promoções</h6>
+										<h6>by winning <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promotions</h6>
 									</label>
 									<div class="trophy flex">
 										<icon name="gold-trophy"></icon>
@@ -176,7 +176,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_promotions['username']; ?>" place="Perfil: <?= $result_achievements_promotions['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_promotions['username']; ?></a></h5>
-									<h6>por ganhar <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promoções</h6>
+									<h6>by winning <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promotions</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="silver-trophy"></icon>
@@ -199,7 +199,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_promotions['username']; ?>" place="Perfil: <?= $result_achievements_promotions['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_promotions['username']; ?></a></h5>
-									<h6>por ganhar <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promoções</h6>
+									<h6>by winning <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promotions</h6>
 								</label>
 								<div class="trophy flex">
 									<icon name="bronze-trophy"></icon>
@@ -222,7 +222,7 @@
 							<div class="flex margin-auto-top-bottom width-content">
 								<label class="gray flex-column margin-auto-top-bottom">
 									<h5 class="bold"><a href="<?= URL . '/profile/' . $result_achievements_promotions['username']; ?>" place="Perfil: <?= $result_achievements_promotions['username'] . ' - ' . HOTELNAME; ?>" class="no-link"><?= $result_achievements_promotions['username']; ?></a></h5>
-									<h6>por ganhar <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promoções</h6>
+									<h6>by winning <b><?= number_format($result_achievements_promotions['promotions']); ?></b> promotions</h6>
 								</label>
 							</div>
 						</div>
@@ -230,10 +230,10 @@
 				</div>
 				<div class="general-box padding-max overflow-hidden flex-column margin-right-min height-content">
 					<label class="gray">
-						<h5>O Hall da Fama de <b>conquistas</b> foi criado com intuito de promover os melhores jogadores de eventos ou os mais empenhados em ganhar promoções onde você tem a chance de ficar entre os 5 usuários que fazem mais pontos em eventos ou que participaram e ganharam promoções!<br><br>Ao final de todo mês este hall da fama é resetado, assim dando uma nova chance para que as outras pessoas possam aparecer por aqui, sem contar que após ser resetado os usuários que ficaram no pódio (5 lugares) ganharam prêmios sendo eles rubis, gemas, emblemas ou até raros. Não perca essa chance e participe dos eventos e ganhe promoções para receber prêmios e ficar famoso!</h5>
+						<h5>The <b>achievements</b> Hall of Fame was created to promote the best event players or those most committed to winning promotions where you have the chance to be among the 5 users who score the most points at events or who participated and won promotions! <br><br>At the end of every month this hall of fame is reset, thus giving a new chance for other people to appear here, not to mention that after being reset users who stayed on the podium (5 places) won prizes being rubies, gems, emblems or even rare. Don't miss this chance and participate in the events and win promotions to receive prizes and become famous!</h5>
 					</label>
 					<button class="green-button-1 margin-top-md" style="width: 100%;height: 45px;margin-bottom: 2px">
-						<label class="margin-auto white">Saber mais</label>
+						<label class="margin-auto white">Learn more!</label>
 					</button>
 				</div>
 			</div>
