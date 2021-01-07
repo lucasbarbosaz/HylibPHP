@@ -37,7 +37,7 @@
 								<div class="margin-auto-left margin-right-md">
 									<a href="<?= URL; ?>/client" target="_blank" class="green-button-1 no-link margin-top-md" style="width: 180px;height: 42px;">
 										<label class="margin-auto white">
-											<h5>Entrar no <b>Hotel</b></h5>
+											<h5>Enter the <b>Hotel</b></h5>
 										</label>
 									</a>
 								</div>
@@ -97,7 +97,7 @@
 									<icon name="gold-trophy" class="margin-auto"></icon>
 								</div>
 								<label class="white">
-									<h5>Usuários ricos</h5>
+									<h5>Rich users</h5>
 								</label>
 							</div>
 							<div class="flex-column users-featured">
@@ -172,7 +172,7 @@
 									<icon name="groups" class="margin-auto"></icon>
 								</div>
 								<label class="white">
-									<h5>Quartos mais curtidos</h5>
+									<h5>Most tanned rooms</h5>
 								</label>
 							</div>
 							<div class="rooms-featured">
@@ -208,14 +208,14 @@
 					<div class="discord-token-box margin-bottom-min">
 						<label class="white flex-column">
 							<h2 class="uppercase bold">Discord Token</h2>
-							<h5 class="margin-bottom-min">Este token serve para dar acesso ao diversos canais que você pode encontrar em nosso servidor do discord.</h5>
-							<h6>Para pegar seu discord token, basta <b>clicar 2x em cima do token</b> e <b>apertar CTRL + C</b> para copiar e em seguida <b>colar no canal de vinculação</b>.</h6>
+							<h5 class="margin-bottom-min">This token is used to give you access to the various channels you can find on our discord server.</h5>
+							<h6>To pick up your discord token, simply <b>click 2x on top of the token</b> and <b>hit CTRL+C</b> to copy and then <b>paste into the linking channel</b>.</h6>
 						</label>
 						<div class="discord-token-label flex">
 						<?php if ($user['discord_token']) { ?>
 							<div class="discord-token-area gray"><?= $user['discord_token']; ?></div>
 						<?php } else { ?>
-							<div class="discord-token-area gray">Você <b>não tem</b> um discord token!</div>
+							<div class="discord-token-area gray">You <b>don't </b> a discord token!</div>
 						<?php } ?>
 							<div class="discord-token-badge pointer-none"></div>
 						</div>
@@ -266,13 +266,13 @@
 					<div class="social-meadia-links flex-column margin-top-min">
 						<h3 class="gray bold margin-bottom-min">Mais acessibilidade para você!</h3>
 						<a href="<?= $Hotel::Settings('facebook'); ?>" target="blank" class="social-media-facebook flex no-link">
-							<div class="margin-auto-top-bottom">Curta a nossa página!</div>
+							<div class="margin-auto-top-bottom">Like us!</div>
 						</a>
 						<a href="<?= $Hotel::Settings('application'); ?>" target="blank" class="desktop-haibbo-application flex no-link">
-							<div class="margin-auto-top-bottom">Baixe nosso aplicativo!</div>
+							<div class="margin-auto-top-bottom">Download our app!</div>
 						</a>
 						<a href="<?= $Hotel::Settings('discord'); ?>" target="blank" class="social-media-discord flex no-link">
-							<div class="margin-auto-top-bottom">Junte-se ao servidor do discord!</div>
+							<div class="margin-auto-top-bottom">Join the discord server!</div>
 						</a>
 					</div>
 				</div>
