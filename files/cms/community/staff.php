@@ -22,12 +22,12 @@
 					<icon name="help"></icon>
 				</div>
 				<div class="flex">
-					<a href="<?= URL . '/community/staff'; ?>" place="Comunidade: Staff - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
+					<a href="<?= URL . '/community/staff'; ?>" place="Community: Staff - <?= HOTELNAME; ?>" class="another-header-menu-option visited">
 						<label>Staff</label>
 					</a>
 					<separator></separator>
-					<a href="<?= URL . '/community/collaboration'; ?>" place="Comunidade: Colaboração - <?= HOTELNAME; ?>" class="another-header-menu-option">
-						<label>Colaboradores</label>
+					<a href="<?= URL . '/community/collaboration'; ?>" place="Community: Collaboration - <?= HOTELNAME; ?>" class="another-header-menu-option">
+						<label>Employees</label>
 					</a>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 							</div>
 							<label class="gray flex-column text-nowrap">
 								<h4 class="bold text-nowrap">CEO's</h4>
-								<h6 class="text-nowrap">Responsáveis por gerenciar a comunidade e o hotel.</h6>
+								<h6 class="text-nowrap">Responsible for managing the community and the hotel.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -67,7 +67,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Faço parte da equipe do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am part of the <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -78,7 +78,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">Looks like no one's holding this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -90,8 +90,8 @@
 								<icon name="duck" class="flex margin-auto"></icon>
 							</div>
 							<label class="gray flex-column text-nowrap">
-								<h4 class="bold text-nowrap">Direção</h4>
-								<h6 class="text-nowrap">Contratações, demissões & organização da equipe.</h6>
+								<h4 class="bold text-nowrap">Manager</h4>
+								<h6 class="text-nowrap">Hiring, layoffs & team organization.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -116,7 +116,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Faço parte da equipe do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am part of the <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -127,7 +127,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">Looks like no one's holding this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -139,8 +139,8 @@
 								<icon name="duck" class="flex margin-auto"></icon>
 							</div>
 							<label class="gray flex-column text-nowrap">
-								<h4 class="bold text-nowrap">Administração</h4>
-								<h6 class="text-nowrap">Atividades, notícias, promoções e entretenimento geral.</h6>
+								<h4 class="bold text-nowrap">Administration</h4>
+								<h6 class="text-nowrap">Activities, news, promotions and general entertainment.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -165,7 +165,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Faço parte da equipe do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am part of the <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -176,7 +176,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">Looks like no one's holding this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -188,8 +188,8 @@
 								<icon name="duck" class="flex margin-auto"></icon>
 							</div>
 							<label class="gray flex-column text-nowrap">
-								<h4 class="bold text-nowrap">Moderação</h4>
-								<h6 class="text-nowrap">Realizar eventos para proporcionar diversão.</h6>
+								<h4 class="bold text-nowrap">Moderation</h4>
+								<h6 class="text-nowrap">Hold events for fun.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -214,7 +214,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Faço parte da equipe do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am part of the <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -225,7 +225,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">Looks like no one's holding this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -239,8 +239,8 @@
 								<icon name="duck" class="flex margin-auto"></icon>
 							</div>
 							<label class="gray flex-column text-nowrap">
-								<h4 class="bold text-nowrap">Desenvolvimento</h4>
-								<h6 class="text-nowrap">Responsáveis pelo funcionamento geral do hotel.</h6>
+								<h4 class="bold text-nowrap">Development</h4>
+								<h6 class="text-nowrap">Responsible for the overall operation of the hotel.</h6>
 							</label>
 						</div>
 						<div class="general-box-content staff flex-column bg-2">
@@ -265,7 +265,7 @@
 									<?php if ($result_staff_role['motto'] != NULL || $result_staff_role['motto'] != '') { ?>
 										<h6><?= $Function::Filter('xss', utf8_encode(utf8_decode($result_staff_role['motto']))); ?></h6>
 									<?php } else { ?>
-										<h6>Sou desenvolvedor do <b><?= HOTELNAME; ?></b>!</h6>
+										<h6>I am a developer of <b><?= HOTELNAME; ?></b>!</h6>
 									<?php } ?>
 								</label>
 							</div>
@@ -276,7 +276,7 @@
 							<div class="display-staff-box flex padding-max">
 								<label class="gray">
 									<h5 class="bold fs-14">OH BOBBA?!</h5>
-									<h6 class="fs-12">Parece que ninguém está ocupando esse cargo! Mas fique atento(a) para novas vagas, quem sabe você não ocupe-a.</h6>
+									<h6 class="fs-12">Looks like no one's holding this position! But stay tuned for new vacancies, maybe you don't occupy it.</h6>
 								</label>
 							</div>
 						<?php } ?>
@@ -289,17 +289,17 @@
 									<icon name="help" class="flex margin-auto"></icon>
 								</div>
 								<label class="gray flex-column text-nowrap">
-									<h4 class="bold text-nowrap">Equipe <?= str_replace(' Hotel', '', HOTELNAME); ?></h4>
-									<h6 class="text-nowrap">Quem nós somos, o que fazemos?</h6>
+									<h4 class="bold text-nowrap">Staff <?= str_replace(' Hotel', '', HOTELNAME); ?></h4>
+									<h6 class="text-nowrap">Who we are, what we do?</h6>
 								</label>
 							</div>
 							<div class="general-box-content staff flex-column padding-md">
 								<label class="flex-column gray">
-									<h5 class="margin-bottom-min">A equipe sempre está a sua disposição para anteder todas as necessidades possíveis de todos os usuários e ouvir a comunidade sempre a comunidade do hotel ao máximo.</h5>
-									<h5 class="margin-bottom-min">Para a segurança de todos, e principalmente evitar enganos dentro do hotel, todos os staffs possuem um emblema como identificação que pode ser visto claramente ao entrar no hotel.</h5>
-									<h5 class="margin-bottom-md">Então caso alguém se passe por um membro da equipe denuncie o mas rápido possível!</h5>
-									<h6 class="bold fs-12">CUIDADO!</h6>
-									<h6>Os staffs nunca vão pedir a sua senha, caso alguém à peça denuncie a um membro superior da equipe</h6>
+									<h5 class="margin-bottom-min">The staff is always at your disposal to preview all the possible needs of all users and listen to the community always the community of the hotel to the maximum.</h5>
+									<h5 class="margin-bottom-min">For everyone's safety, and especially avoid cheating inside the hotel, all staffs have an emblem as identification that can be clearly seen upon entering the hotel.</h5>
+									<h5 class="margin-bottom-md">So in case someone passes for a team member, report it as soon as possible!</h5>
+									<h6 class="bold fs-12">WARNING!</h6>
+									<h6>Staff will never ask for your password if someone on the piece report it to a senior member of staff</h6>
 								</label>
 							</div>
 						</div>
