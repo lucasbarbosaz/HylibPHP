@@ -1,0 +1,21 @@
+{
+	"short_name": "Haibbo",
+	"name": "Haibbo Hotel",
+	"icons": [
+		{
+			"src": "/cdn/assets/img/icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/cdn/assets/img/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+
+	"start_url": "/index",
+	"background_color": "#7dd1e5",
+	"display": "standalone",
+	"theme_color": "#7dd1e5"
+}
