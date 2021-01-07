@@ -29,7 +29,7 @@
 					if ($result_last_comment_by_me['timestamp'] >= time() - 600) {
 						echo json_encode([
 							"response" => 'error',
-							"append" => '<div class="general-warn-time-2"><label>Você precisa esperar <b>10 minutos</b> para poder comentar novamente ' . $user['username'] . '.</label></div>'
+							"append" => '<div class="general-warn-time-2"><label>You need to wait <b>10 minutes</b> to be able to comment again ' . $user['username'] . '.</label></div>'
 						]);
 					} else {
 						$trim_value = strip_tags($value);
@@ -37,17 +37,17 @@
 						if (strlen($trim_value) == 0) {
 							echo json_encode([
 								"response" => 'error',
-								"append" => '<div class="general-warn-2"><label>Você precisa digitar algo para poder comentar.</label></div>'
+								"append" => '<div class="general-warn-2"><label>You need to type something to be able to comment.</label></div>'
 							]);
 						} else if (strlen($trim_value) > 100) {
 							echo json_encode([
 								"response" => 'error',
-								"append" => '<div class="general-warn-2"><label>Vish ' . $user['username'] . ', seu comentário é muito grande.</label></div>'
+								"append" => '<div class="general-warn-2"><label>Vish ' . $user['username'] . ', your comment is too great.</label></div>'
 							]);
 						} else if ($Function::AntiPub($value) !== false) {
 							echo json_encode([
 								"response" => 'error',
-								"append" => '<div class="general-warn-2"><label>Hmm, parece que encontramos uma palavra da lista negra no seu comentário.</label></div>'
+								"append" => '<div class="general-warn-2"><label>Hmm, looks like we found a blacklist word in your comment.</label></div>'
 							]);
 						} else {
 							$insert_comment_article = $db->prepare("INSERT INTO cms_post_comments (type, post_id, value, author_id, timestamp) VALUES (?,?,?,?,?)");
