@@ -10,7 +10,7 @@
 <li>MySQL 5.0+</li>
 <li>IIS</li>
 <li>XAMPP 5.5.30+</li>
-<li>Comet Emulator/Arcturus(Only adapt after)</li>
+<li>Compatibly with any emulator(Only adapt after)</li>
 <hr>
 <h2>Security</h2>
 <h4>This CMS is completely safe because it contains no flaws like XSS or SQL.</h4>
