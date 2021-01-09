@@ -94,7 +94,7 @@
 			} else {
 				echo json_encode([
 					"response" => 'error',
-					"append" => '<div class="general-warn-2"><label>Não foi possivel comentar nesta noticia, tente novamente mais tarde!</label></div>'
+					"append" => '<div class="general-warn-2"><label>It was not possible to comment on this news, try again later!</label></div>'
 				]);
 			}
 		}
