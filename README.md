@@ -2,7 +2,7 @@
 <h5>Created by Laxus, Dut & Wake</h5>
 **All rights reserved.**
 <hr>
-<h4>Images - <a href="https://imgur.com/a/Un2XEnf" target="_blank">Images</a></h4>
+<h4>Images - <a href="https://imgur.com/a/Pag3tGq" target="_blank">Images</a></h4>
 <hr>
 <h2>Compatibility</h2>
 <h4>This cms is compatible with:</h4>
