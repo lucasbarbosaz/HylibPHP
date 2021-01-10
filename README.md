@@ -21,5 +21,5 @@
 <h4>Laxus // Discord-> laxus#0002
 </h4>
 <h4>Dut // Discord-> dut##3031</h4>
-<h4>Wake // Discord-> Wake#0009</h4>
+<h4>Wake // Discord-> Wake#1716</h4>
 <hr>
